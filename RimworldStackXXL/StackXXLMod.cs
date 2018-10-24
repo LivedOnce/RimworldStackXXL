@@ -54,7 +54,7 @@ namespace StackXXL
         private static bool IsResources(ThingDef d)
         {
             var category = d.thingCategories[0];
-            return category == ThingCategoryDefOf.Manufactured || category == ThingCategoryDefOf.ResourcesRaw || category == ThingCategoryDefOf.StoneBlocks || "Medicine".Equals(category.defName);
+            return category == ThingCategoryDefOf.Manufactured || category == ThingCategoryDefOf.ResourcesRaw || category == ThingCategoryDefOf.StoneBlocks;
         }
 
         private static bool IsTextiles(ThingDef d)
@@ -66,7 +66,7 @@ namespace StackXXL
         private static bool IsDrugs(ThingDef d)
         {
             var category = d.thingCategories[0];
-            return "Drugs".Equals(category.defName);
+            return "Drugs".Equals(category.defName) || "Medicine".Equals(category.defName);
         }
 
         private static bool IsMeat(ThingDef d)
